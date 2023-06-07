@@ -63,4 +63,12 @@ class NextDayCalculatorTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    void testFindNextDay7() throws ParseException {
+        String actual = "29/2/2020";
+        String expected = "Invalid Date Format!";
+        String result = NextDayCalculator.findNextDay(actual);
+        assertEquals(expected, result);
+    }
+
 }

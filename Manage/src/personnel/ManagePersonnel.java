@@ -187,14 +187,15 @@ public class ManagePersonnel {
                 display();
                 break;
             case 4:
-                Collections.sort(personnel, new Comparator<Personnel>() {
-                    @Override
-                    public int compare(Personnel o1, Personnel o2) {
-                        if (o1.getBirthday().compareTo(o2.getBirthday()) == 0) {
-                            return o1.getId() - o2.getId();
-                        } else return o1.getBirthday().compareTo(o2.getBirthday());
-                    }
-                });
+                personnel.sort((personnel1, personnel2) -> personnel1.getBirthday().compareTo(personnel2.getBirthday()));
+//                Collections.sort(personnel, new Comparator<Personnel>() {
+//                    @Override
+//                    public int compare(Personnel o1, Personnel o2) {
+//                        if (o1.getBirthday().compareTo(o2.getBirthday()) == 0) {
+//                            return o1.getId() - o2.getId();
+//                        } else return o1.getBirthday().compareTo(o2.getBirthday());
+//                    }
+//                });
                 display();
                 break;
             default:

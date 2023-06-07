@@ -20,7 +20,6 @@ public class HomeWork {
             if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
                 check = false;
                 break;
-                ;
             }
         }
         return check;
